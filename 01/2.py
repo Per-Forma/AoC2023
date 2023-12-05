@@ -50,12 +50,12 @@ with open('input', 'r') as data:
             calib_value2 = digits[digits.__len__() - 1]
         else:
             for item in spelled_digits_in_ending:
-                index_of_item = ending.index(item)
+                index_of_item = ending.rfind(item)
                 if index_of_item >= ending_spelled_index:
                     ending_spelled_index = index_of_item
                     calib_value2 = spelled_digits.index(item) + 1
 
         combined_calib_val = str(calib_value1) + str(calib_value2)
-        print(combined_calib_val + ' ' + line)
+        # print(combined_calib_val + ' ' + line)
         answer = answer + int(combined_calib_val)
 print(answer)
